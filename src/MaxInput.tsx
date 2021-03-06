@@ -9,7 +9,7 @@ type InputProps = {
     title: string
 }
 
-export function MaxInput(props: InputProps) {
+export const MaxInput = React.memo((props: InputProps) => {
 
     const onMaxInputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.changeMaxValue(+e.currentTarget.value);
@@ -25,4 +25,4 @@ export function MaxInput(props: InputProps) {
 
         </div>
     );
-}
+})

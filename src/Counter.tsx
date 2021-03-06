@@ -9,7 +9,7 @@ type CounterPropsType = {
     instruction: string
 }
 
-function Counter(props: CounterPropsType) {
+export const Counter = React.memo((props: CounterPropsType) =>{
     const disableValue = props.counter === props.maxValue || props.startValue < 0 || props.startValue >= props.maxValue;
     const counterStyle = (disableValue) ? "incorrectCounterStyle" : "CounterStyle";
 
@@ -20,6 +20,5 @@ function Counter(props: CounterPropsType) {
             </div>
         </div>
     );
-}
+})
 
-export default Counter;

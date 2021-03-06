@@ -8,7 +8,7 @@ type InputPropsType = {
     title: string
 }
 
-export function StartInput(props: InputPropsType) {
+export const StartInput = React.memo((props: InputPropsType) => {
     const onStartInputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
         props.changeStartValue(+e.currentTarget.value);
     }
@@ -23,6 +23,6 @@ export function StartInput(props: InputPropsType) {
         </div>
 
     );
-}
+})
 
 

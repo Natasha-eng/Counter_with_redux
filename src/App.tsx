@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import './App.css';
-import Counter from "./Counter";
+import {Counter} from "./Counter";
 import {StartInput} from "./StartInput";
 import {MaxInput} from "./MaxInput";
 import {useDispatch, useSelector} from "react-redux";
